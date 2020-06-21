@@ -13,8 +13,8 @@ if File.exist? vars_file
         cent7.vm.network "forwarded_port", id: "ssh", guest: 22, host: 2201
         cent7.vm.provider "virtualbox" do |v|
             v.name = "CentOS 7 IDE"
-            v.memory = 2047
-            v.cpus = 2
+            v.memory = runtime_vars["vm_memory"]
+            v.cpus = runtime_vars["vm_cpus"]
         end
         cent7.vm.synced_folder ".", "/vagrant", disabled: false, mount_options: ["dmode=775", "fmode=775"]
         cent7.vm.provision :shell, inline: "/vagrant/bootstrap.sh"
@@ -31,8 +31,8 @@ if File.exist? vars_file
         cent8.vm.network "forwarded_port", id: "ssh", guest: 22, host: 2202
         cent8.vm.provider "virtualbox" do |v|
             v.name = "CentOS 8 IDE"
-            v.memory = 2048
-            v.cpus = 2
+            v.memory = runtime_vars["vm_memory"]
+            v.cpus = runtime_vars["vm_cpus"]
         end
         cent8.vm.synced_folder ".", "/vagrant", disabled: false, mount_options: ["dmode=775", "fmode=775"]
         cent8.vm.provision :shell, inline: "/vagrant/bootstrap.sh"

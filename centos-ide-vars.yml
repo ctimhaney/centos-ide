@@ -2,3 +2,5 @@ build_cent7: True
 build_cent8: True
 git_config_user: <Your Name>
 git_config_email: <Your Email>
+vm_memory: 4096
+vm_cpus: 2

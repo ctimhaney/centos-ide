@@ -15,6 +15,7 @@ as well as deployment tools
 * docker
 * ansible
 * git
+* pyenv
 
 As part of the bootstrap process.
 
