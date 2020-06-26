@@ -44,6 +44,8 @@ And run the following command
 vagrant up
 ```
 
+A lot of output to console is suppressed or redirected. If the bootstrap script fails, check `/tmp/bootstrap-install.log` on the resultant VM for details.
+
 ## TODO
 
 * More elegant vars
