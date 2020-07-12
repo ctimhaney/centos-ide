@@ -37,8 +37,8 @@ systemctl enable docker
 usermod -aG docker vagrant
 
 # golang installation
-curl -s -X GET "https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz" -o "go1.14.2.linux-amd64.tar.gz"
-tar -C /usr/local -xzf "go1.14.2.linux-amd64.tar.gz"
+curl -s -X GET "https://dl.google.com/go/go1.14.2.linux-amd64.tar.gz" -o "go1.linux-amd64.tar.gz"
+tar -C /usr/local -xzf "go1.linux-amd64.tar.gz"
 echo 'export "PATH=$PATH:/usr/local/go/bin"' >> /home/vagrant/.bash_profile
 
 # git configure
@@ -62,3 +62,9 @@ curl -s -X GET "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "aw
 unzip awscliv2.zip
 echo "Installing aws-cli..."
 aws/install >> /tmp/bootstrap-install.log
+
+# Gradle Install
+wget https://services.gradle.org/distributions/gradle-6.5.1-bin.zip
+mkdir /opt/gradle
+unzip -d /opt/gradle gradle-6.5.1-bin.zip
+ln -s /opt/gradle/gradle-6.5.1/bin/gradle /usr/local/bin/gradle
