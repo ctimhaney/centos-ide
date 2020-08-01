@@ -7,7 +7,7 @@ then
   echo "Installing EPEL..."
   yum install -y epel-release >> /tmp/bootstrap-install.log
   echo "Installing Packages..."
-  yum install -y net-tools java-1.8.0-openjdk-* gcc openssl openssl-devel python3 dos2unix vim-enhanced ansible git ruby htop zlib-devel bzip2-devel readline-devel sqlite-devel glibc less unzip >> /tmp/bootstrap-install.log
+  yum install -y net-tools java-1.8.0-openjdk-* gcc openssl openssl-devel python3 dos2unix vim-enhanced git ruby htop zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel xz xz-devel libffi-devel glibc less unzip >> /tmp/bootstrap-install.log
 
   # docker install
   yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -23,7 +23,7 @@ then
   echo "Installing EPEL..."
   dnf install -y epel-release >> /tmp/bootstrap-install.log
   echo "Installing Packages..."
-  dnf install -y net-tools java-1.8.0-openjdk-* gcc openssl openssl-devel python3 dos2unix vim-enhanced ansible git ruby htop zlib-devel bzip2-devel readline-devel sqlite-devel glibc less unzip >> /tmp/bootstrap-install.log
+  dnf install -y net-tools java-1.8.0-openjdk-* gcc openssl openssl-devel python3 dos2unix vim-enhanced git ruby htop zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel xz xz-devel libffi-devel glibc less unzip >> /tmp/bootstrap-install.log
 
   # CentOS 8 flavored docker-ce isntall
   dnf config-manager --add-repo=https://download.docker.com/linux/centos/docker-ce.repo
