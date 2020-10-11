@@ -68,3 +68,7 @@ wget https://services.gradle.org/distributions/gradle-6.5.1-bin.zip
 mkdir /opt/gradle
 unzip -d /opt/gradle gradle-6.5.1-bin.zip
 ln -s /opt/gradle/gradle-6.5.1/bin/gradle /usr/local/bin/gradle
+
+# terraform
+curl -X GET https://releases.hashicorp.com/terraform/0.13.4/terraform_0.13.4_linux_amd64.zip -o terraform.zip
+unzip terraform.zip -d /usr/local/bin/
